@@ -1,7 +1,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Adam Hemphill: Oakland-based <strike>software engineer</strike> <strike>product designer</strike> <em>person</em></title>
+		<title>Adam Hemphill: Front-End Web Software Engineer in Oakland, CA</title>
 
 		<link rel="stylesheet" type="text/css" media="screen" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css">
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
@@ -9,12 +9,12 @@
 			html		{height: 100%;}
 			body		{position: relative; margin: 1em;
 						text-align: left; font-size: 14px; line-height: 18px; font-family: 'Droid Sans Mono', monospace;}
-			h1, h2		{margin-bottom: 1em;}
+			h1			{margin: 1em -2.3em;}
 			ul			{margin-bottom: 1em; padding-left: 2.3em;}
-      em      {font-style: italic;}
+		    em      	{font-style: italic;}
 			.purple		{color: purple;}
 			.green		{color: green;}
-			.grey		{color: #808080; padding-left: 2.3em;}
+			.grey		{color: #808080; /*padding-left: 2.3em;*/}
 			.red		{color: red !important;}
 			.black		{color: black;}
 			.none		{display:none;}
@@ -22,24 +22,20 @@
 			a:visited	{color: #b0b0b0; text-decoration: none;}
 			a:hover		{text-decoration: underline;}
 			a:active	{top: 1px;}
-			div.grey div	{margin-bottom: 1em;}
+			section		{margin-left: 4.6em;}
+			section.grey:before	{content: '<!--'; display: block; margin-bottom: 1em; margin-left: -4.6em;}
+			section.grey:after	{content: '-->'; display: block; margin: 1em -4.6em;}
 		</style>
     </head>
 	<body>
-		<div class="grey">
-			<div>
-				&lt;!--
-			</div>
-			<h1><span class="black">Adam Hemphill</span>: Oakland-based <strike>software engineer</strike> <strike>product designer</strike> <em>person</em></h1>
+		<section class="grey">
+			<h1><span class="black">Adam Hemphill</span>: Front-End Web Software Engineer in Oakland, CA</h1>
 			Recently:
 			<ul>
-        <li><a href="http://ahemphill.net/hacker-news-duplicate-checker/">Hacker News Duplicate Checker</a></li>
+        		<li><a href="http://ahemphill.net/hacker-news-duplicate-checker/">Hacker News Duplicate Checker</a></li>
 				<li><a href="http://ahemphill.net/wkom-for-strava/">W/kom for Strava</a></li>
 			</ul>
-			<h2>Get in touch: <a id="email" title="Hit me up." href="mailto:hi@[remove this]ahemphill.net"</a>hi@<span class="none">[remove this]</span>ahemphill.net</a> / 415-404-8084 / <a href="http://twitter.com/ahemphill" title="Old school.">@ahemphill</a></h2>
-      <div>
-				--&gt;
-			</div>
-		</div>
+			Get in touch: <a id="email" title="Hit me up." href="mailto:hi@[remove this]ahemphill.net"</a>hi@<span class="none">[remove this]</span>ahemphill.net</a> / 415-404-8084 / <a href="http://twitter.com/ahemphill" title="Old school.">@ahemphill</a>
+		</section>
 	</body>
 </html>
