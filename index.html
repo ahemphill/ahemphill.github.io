@@ -25,6 +25,7 @@
 			section		{margin-left: 4.6em;}
 			section.grey:before	{content: '<!--'; display: block; margin-bottom: 1em; margin-left: -4.6em;}
 			section.grey:after	{content: '-->'; display: block; margin: 1em -4.6em;}
+			p 			{margin-top: 1em;}
 		</style>
     </head>
 	<body>
@@ -35,7 +36,29 @@
         		<li><a href="http://ahemphill.net/hacker-news-duplicate-checker/">Hacker News Duplicate Checker</a></li>
 				<li><a href="http://ahemphill.net/wkom-for-strava/">W/kom for Strava</a></li>
 			</ul>
-			Get in touch: <a id="email" title="Hit me up." href="mailto:hi@[remove this]ahemphill.net"</a>hi@<span class="none">[remove this]</span>ahemphill.net</a> / 415-404-8084 / <a href="http://twitter.com/ahemphill" title="Old school.">@ahemphill</a>
+			<p id="currently-reading" style="display:none">Currently reading: </p>
+
+			<p>Get in touch: <a id="email" title="Hit me up." href="mailto:hi@[remove this]ahemphill.net"</a>hi@<span class="none">[remove this]</span>ahemphill.net</a> / 415-404-8084 / <a href="http://twitter.com/ahemphill" title="Old school.">@ahemphill</a></p>
 		</section>
 	</body>
+	<script>
+		document.addEventListener( 'DOMContentLoaded', function() {
+			'use strict';
+			let request;
+			let currentlyReading = (function(){
+				request = new XMLHttpRequest();
+				request.open( 'GET', `https://currently-reading.herokuapp.com/` );
+				request.onreadystatechange = displayCurrentlyReading;
+				request.send();
+			})();
+
+			function displayCurrentlyReading(){
+				if ( request.readyState === XMLHttpRequest.DONE && request.status === 200 ){
+					let elem = document.getElementById('currently-reading');
+					elem.innerHTML += request.responseText;
+					elem.removeAttribute( 'style' );
+				}
+			}
+		});
+	</script>
 </html>
