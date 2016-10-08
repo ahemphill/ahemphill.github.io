@@ -47,7 +47,7 @@
 			let request;
 			let currentlyReading = (function(){
 				request = new XMLHttpRequest();
-				request.open( 'GET', `https://currently-reading.herokuapp.com/` );
+				request.open( 'GET', `https://currently-reading.ahemphill.net/` );
 				request.onreadystatechange = displayCurrentlyReading;
 				request.send();
 			})();
